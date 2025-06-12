@@ -368,8 +368,8 @@ command! -nargs=+ NotifyError    :call VimNotify(<q-args>, 'error')
 
 " the leader key
 " (NOTE) leader key is mapped to vim-which-key, see sections below
-let mapleader=','           " comma is the <Leader> key.
-let maplocalleader=','      " comma : <LocalLeader>
+let mapleader=' '           " comma is the <Leader> key.
+let maplocalleader=' '      " comma : <LocalLeader>
 nnoremap <leader>:  :
 
 nnoremap <Space> :
@@ -1237,11 +1237,11 @@ if has('termguicolors')
 endif
 
 " apply colorscheme (base: xoria256 + customization)
-" See ~/.vim/colors/xoria256-dustin.vim
+" See ~/.vim/colors/xoria256-wook.vim
 " For neovim + lazy.nvim: see init.lua
 if !has('nvim-0.8') && !exists('g:colors_name')
   try
-    silent! colorscheme xoria256-dustin
+    silent! colorscheme xoria256-wook
   catch /E185/  " Cannot find color scheme
     silent! colorscheme evening
   endtry

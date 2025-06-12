@@ -74,8 +74,13 @@ fi
 source "${ZDOTDIR:-$HOME}/.zsh/antidote/antidote.zsh"
 
 # Source the Prezto configuration file.
-if [[ -s "${ZDOTDIR:-$HOME}/.zpreztorc" ]]; then
-  source "${ZDOTDIR:-$HOME}/.zpreztorc"
+#if [[ -s "${ZDOTDIR:-$HOME}/.zpreztorc" ]]; then
+#  source "${ZDOTDIR:-$HOME}/.zpreztorc"
+#fi
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  if [[ -z "${CLAUDECODE}" ]]; then
+    source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+  fi
 fi
 
 # Do not put all usernames as possible candidates for tab completion.
@@ -264,3 +269,8 @@ if [ -n "$ZSH_PROFILE_LOG" ]; then
 fi
 
 # vim: set ts=2 sts=2 sw=2:
+alias mbu='ssh -A mbu-bastion'
+alias collegis='ssh -A col-bastion'
+alias col='ssh -A col-bastion'
+alias ctx='ssh -A ctx-bastion'
+#export XDG_CONFIG_HOME="$HOME/.dotfiles"
