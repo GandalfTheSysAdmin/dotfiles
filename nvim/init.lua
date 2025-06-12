@@ -85,7 +85,7 @@ end
 do
   -- Colorscheme needs to be called AFTER plugins are loaded,
   -- because of the different plugin loading mechanism and order.
-  vim.cmd [[ colorscheme xoria256-wook ]]
+  vim.cmd [[ colorscheme xoria256-dustin ]]
 end
 
 if noplugin then

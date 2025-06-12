@@ -1,53 +1,61 @@
-Dotfiles
-========
+# Dustin's Dotfiles
 
 🏠 Personal dotfiles for \*NIX (macOS and Linux) systems.
 
-Installation
-------------
+Originally forked from [wookayin/dotfiles](https://github.com/wookayin/dotfiles) and customized for my personal workflow.
 
-### 👉 One-liner (if you trust me):
+## Installation
 
-```bash
-curl -fsSL https://dotfiles.wook.kr/etc/install | bash
-```
-
-<details><summary>
-💡 (Tip) You only need to remember <code>curl dotfiles.wook.kr</code> (Click to expand)
-</summary></p>
-
-* Every file is accessible through `dotfiles.wook.kr` (via `curl -L` or `wget`), e.g.,
-  * https://dotfiles.wook.kr/vimrc
-  * https://dotfiles.wook.kr/vimrc?raw=true
-  * https://dotfiles.wook.kr/bin/tb
-
-<p></details>
-
-<details><summary>
-🤔 Want to manually clone and install? (Click to expand)
-</summary><p>
+### Manual Installation
 
 ```bash
-$ git clone --recursive https://github.com/wookayin/dotfiles.git ~/.dotfiles
+$ git clone --recursive https://github.com/dustin-liddick/dotfiles.git ~/.dotfiles
 $ cd ~/.dotfiles && python install.py
 ```
-
-<!--
-Note: The option `-j8` (`--jobs 8`) works with Git >= 2.8 (parallel submodule fetching).
-For older versions of Git, try without `-j` option.
--->
-
-</p></details>
-
-<br>
 
 
 The installation script will clone the repository into `~/.dotfiles` and create symbolic links (e.g., `~/.vimrc`) for you.
 If target files already exist (e.g. `~/.vim`, `~/.vimrc`), you will need to manually resolve the conflict (delete the old one or just ignore). See Troubleshooting below for details.
 
+## What's Included
 
-`$ dotfiles`
-------------
+This dotfiles configuration provides a comprehensive development environment with:
+
+### 🔧 Core Tools
+- **Neovim**: Advanced text editor with modern features, LSP support, and extensive plugin ecosystem
+- **Zsh**: Enhanced shell with Oh My Zsh, custom themes, and productivity plugins
+- **Tmux**: Terminal multiplexer for session management
+- **Git**: Version control with advanced aliases and delta diff viewer
+
+### 🎨 Terminal & UI
+- **Alacritty/Kitty/WezTerm**: GPU-accelerated terminal emulators
+- **Nerd Fonts**: Enhanced font support with icons and symbols
+- **24-bit color support**: True color terminal experience
+- **Custom color schemes**: Optimized for readability and aesthetics
+
+### 💻 Development Environment
+- **LSP Integration**: Language Server Protocol support for multiple languages
+- **Tree-sitter**: Advanced syntax highlighting and code understanding
+- **DAP (Debug Adapter Protocol)**: Debugging support within Neovim
+- **Completion**: Advanced autocompletion with nvim-cmp
+- **Snippets**: Custom code snippets for faster development
+
+### 🐍 Python Development
+- **ptpython**: Enhanced Python REPL
+- **Conda**: Environment management configuration
+- **Code style**: PEP8 compliance with pycodestyle and pylint
+- **Debugging**: pudb integration for visual debugging
+
+### ⚡ Key Features
+- **Fast fuzzy finding**: FZF integration for files, buffers, and text search
+- **Git integration**: Fugitive, gitsigns, and custom git aliases
+- **Project management**: Session handling and workspace organization
+- **Performance optimized**: Lazy loading and efficient plugin management
+
+
+## Usage
+
+### Dotfiles Management
 
 **To update dotfiles** (pull changes from upstream and run [`install.py`][install.py] again):
 
@@ -62,6 +70,54 @@ On Linux, you can [install some common softwares locally][linux-locals.sh] (into
 $ dotfiles install neovim         # -> ~/.local/bin/nvim
 $ dotfiles install ripgrep        # -> ~/.local/bin/rg
 ```
+
+### Quick Start Guide
+
+After installation, here are some key things to get you started:
+
+#### Neovim
+- Launch with `nvim` or `vim`
+- `:checkhealth` - Verify installation
+- `:Lazy` - Plugin manager interface
+- `<leader>` key is set to space
+- `<leader>ff` - Find files with Telescope
+- `<leader>fg` - Live grep with Telescope
+
+#### Zsh
+- Rich completions and syntax highlighting
+- `fzf` integration for history and file search
+- Git status in prompt
+- Custom aliases in `zsh/zsh.d/alias.zsh`
+
+#### Tmux
+- Prefix key: `Ctrl-a`
+- `prefix + I` - Install plugins
+- Session management and window splitting
+
+### Personal Configuration
+
+After installation, you'll need to set up your personal information:
+
+1. **Git Configuration**: Copy the template and customize it:
+   ```bash
+   cp ~/.dotfiles/.gitconfig.secret.template ~/.gitconfig.secret
+   # Edit ~/.gitconfig.secret with your name, email, and GitHub username
+   ```
+
+2. **SSH Keys**: Make sure your SSH keys are set up for GitHub:
+   ```bash
+   ssh-keygen -t ed25519 -C "your-email@example.com"
+   # Add the public key to your GitHub account
+   ```
+
+### Customization
+
+The dotfiles are designed to be customizable. Key areas you might want to modify:
+
+- **Zsh aliases**: Edit `zsh/zsh.d/alias.zsh`
+- **Neovim config**: Modify files in `nvim/lua/config/`
+- **Terminal colors**: Adjust terminal emulator configs in `config/`
+- **Git aliases**: Add custom git aliases in `git/gitconfig`
 
 
 🆘 Troubleshooting
@@ -115,14 +171,16 @@ $ dotfiles install ripgrep        # -> ~/.local/bin/rg
 
 
 [neovim]: https://github.com/neovim/neovim
-[dotfiles-update]: https://github.com/wookayin/dotfiles/blob/master/bin/dotfiles
-[linux-locals.sh]: https://github.com/wookayin/dotfiles/blob/master/etc/linux-locals.sh
-[install.py]: https://github.com/wookayin/dotfiles/blob/master/install.py
+[dotfiles-update]: bin/dotfiles
+[linux-locals.sh]: etc/linux-locals.sh
+[install.py]: install.py
 
 
-License
--------
+## License
 
 [The MIT License (MIT)](LICENSE)
 
+Copyright (c) 2025 Dustin Liddick
+
+Originally forked from [wookayin/dotfiles](https://github.com/wookayin/dotfiles)  
 Copyright (c) 2012-2024 Jongwook Choi (@wookayin)

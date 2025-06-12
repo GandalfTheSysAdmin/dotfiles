@@ -83,7 +83,7 @@ require("lazy").setup(PLUGIN_SPEC, {
   },
   install = {
     missing = true,
-    colorscheme = {"xoria256-wook"},
+    colorscheme = {"xoria256-dustin"},
   },
   ui = {
     wrap = true,

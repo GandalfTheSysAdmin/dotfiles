@@ -49,8 +49,8 @@ function M.action(arg)
     ['plug'] = 'plugins.lua',
     ['lazy'] = 'plugins.lua',
     ['ide'] = 'plugins/ide.lua',
-    ['theme'] = 'colors/xoria256-wook.vim',
-    ['color'] = 'colors/xoria256-wook.vim',
+    ['theme'] = 'colors/xoria256-dustin.vim',
+    ['color'] = 'colors/xoria256-dustin.vim',
   }
   local file = map[arg] or map[arg .. '.lua'] or map[arg .. '.vim'] or map[aliases[arg]]
   if arg == 'ftplugin/' or arg == 'ftplugin' then

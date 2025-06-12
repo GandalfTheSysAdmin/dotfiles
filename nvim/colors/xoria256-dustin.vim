@@ -1,14 +1,15 @@
 " Vim color file
 "
-" Name:            xoria256-wook.vim
+" Name:            xoria256-dustin.vim
 " Original Author: Dmitriy Y. Zotikov <xio@unground.org>
+" Modified by:     Dustin Liddick (originally based on wookayin's customizations)
 "
 " This is a colorscheme based on xoria256 but with more customization added.
 
 " $VIMPLUG/vim-colorschemes/colors/xoria256.vim
 runtime colors/xoria256.vim
 
-let g:colors_name = "xoria256-wook"
+let g:colors_name = "xoria256-dustin"
 
 " Explicitly list and define highlights for default groups that are lacking in
 " the base colorscheme; make the colorscheme look as similar as with the legacy vim

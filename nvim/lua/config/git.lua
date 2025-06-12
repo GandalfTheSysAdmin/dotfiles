@@ -85,7 +85,7 @@ function M.setup_gitsigns()
     signcolumn = true,
     signs = {
       -- █ ▉ ▊ ▋ ▌ ▍ ▎ ▏ ┃│┆
-      -- For highlights, see $DOTVIM/colors/xoria256-wook.vim
+      -- For highlights, see $DOTVIM/colors/xoria256-dustin.vim
       add          = { text = '┃' },
       change       = { text = '┃' },
       topdelete    = { text = '‾' },

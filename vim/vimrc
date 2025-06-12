@@ -1237,11 +1237,11 @@ if has('termguicolors')
 endif
 
 " apply colorscheme (base: xoria256 + customization)
-" See ~/.vim/colors/xoria256-wook.vim
+" See ~/.vim/colors/xoria256-dustin.vim
 " For neovim + lazy.nvim: see init.lua
 if !has('nvim-0.8') && !exists('g:colors_name')
   try
-    silent! colorscheme xoria256-wook
+    silent! colorscheme xoria256-dustin
   catch /E185/  " Cannot find color scheme
     silent! colorscheme evening
   endtry
